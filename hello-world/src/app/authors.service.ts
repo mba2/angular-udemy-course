@@ -1,12 +1,16 @@
+import { FavoriteComponent } from './favorite/favorite.component';
 import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthorsService {
 
-  constructor() { }
+  constructor() { 
+
+  }
 
   getAuthors() {
     return ["author 1","author 2","author 3"];
   }
+
   
 }
