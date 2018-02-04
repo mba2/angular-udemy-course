@@ -1,0 +1,10 @@
+<div>
+  <span
+   [class.isLiked]="isLiked" class="like-icon glyphicon glyphicon-heart"
+   (click)="onClick()"
+   >
+  </span>
+  <span class="like-count">
+    {{ likesAmount }}
+  </span>
+</div>

@@ -1,0 +1,19 @@
+<button class="btn btn-danger" [class.active]="flag === 'one'"  (click)="flag = 'one'">
+  one
+</button>
+<button class="btn btn-warning" [class.active]="flag === 'two'" (click)="flag = 'two'">
+  two
+</button>
+
+<div class="main-area" [ngSwitch]="flag">
+  <div  *ngSwitchCase="'one'">
+    One Content
+  </div>
+  <div *ngSwitchCase="'two'">
+    Two content
+  </div>
+  <div *ngSwitchDefault>
+    Defautl Content
+  </div>
+</div>
+

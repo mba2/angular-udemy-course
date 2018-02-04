@@ -1,0 +1,8 @@
+.like-icon {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+.isLiked:before {
+    color: red;
+}

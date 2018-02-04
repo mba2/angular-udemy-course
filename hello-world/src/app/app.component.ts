@@ -13,6 +13,12 @@ export class AppComponent {
     isFavorited : true
   };
 
+  tweet = {
+    likesAmount : 8,
+    isLiked : false,
+    content : "This is some text of a tweet"
+  }
+
   onFavoriteChanged(object : FavoriteObject) {
     console.log("changed", object.status);
   }

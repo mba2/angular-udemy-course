@@ -1,0 +1,22 @@
+<!-- ng-template examples!! -->
+<div class="btn btn-success" (click)="onClick()">toggle me</div>
+
+<div *ngIf="flag; then firstBlock else secondBlock"></div>
+<ng-template #firstBlock>
+  <h1>This is the first block content</h1>
+</ng-template>
+
+<ng-template #secondBlock>
+  <h2>This is the second content</h2>
+</ng-template>
+
+<!-- ngIf examples!! -->
+<div *ngIf="flag">
+  <h1>This is the third content</h1>
+</div>
+
+<div *ngIf="!flag">
+  <h2>This is the fourth content</h2>
+</div>
+
+
