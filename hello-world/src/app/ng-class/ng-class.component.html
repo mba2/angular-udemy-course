@@ -1,0 +1,9 @@
+<p 
+  [ngClass]="{
+    is_true  : prop_1,
+    is_false  : !prop_1
+  }"
+  (click)="prop_1 = !prop_1"
+>
+  {{prop_1}}
+</p>

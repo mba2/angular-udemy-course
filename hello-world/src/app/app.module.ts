@@ -1,3 +1,4 @@
+import { InputFormattingDirective } from './directives/input-formatting.directive';
 import { SummaryPipe } from './custom-pipes/summary.pipe';
 import { TitleCasePipe } from './custom-pipes/title_case.pipe';
 import { AuthorsService } from './authors.service';
@@ -15,6 +16,10 @@ import { PanelBootstrapComponent } from './panel--bootstrap/panel--bootstrap.com
 import { LikeComponent } from './like/like.component';
 import { IfDirectiveComponent } from './if-directive/if-directive.component';
 import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component';
+import { NgClassComponent } from './ng-class/ng-class.component';
+import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
+import { ZippyComponent } from './zippy/zippy.component';
+
 
 
 @NgModule({
@@ -29,7 +34,12 @@ import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component
     PanelBootstrapComponent,
     LikeComponent,
     IfDirectiveComponent,
-    NgSwitchCaseComponent
+    NgSwitchCaseComponent,
+    NgClassComponent,
+    SafeTraversalComponent,
+    InputFormattingDirective,
+    ZippyComponent
+    
   ],
   imports: [
     BrowserModule,

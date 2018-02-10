@@ -1,0 +1,9 @@
+<div class="zippy__wrapper">
+  <div class="zippy__header" (click)="toggleAccordion()">
+    <h1>{{ title }}</h1>
+  </div>
+  <div class="zippy__body"
+    [class.is_active]="isActive">
+    <ng-content></ng-content>
+  </div>
+</div>
