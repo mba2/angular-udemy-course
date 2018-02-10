@@ -4,7 +4,7 @@ import { TitleCasePipe } from './custom-pipes/title_case.pipe';
 import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -19,6 +19,9 @@ import { NgSwitchCaseComponent } from './ng-switch-case/ng-switch-case.component
 import { NgClassComponent } from './ng-class/ng-class.component';
 import { SafeTraversalComponent } from './safe-traversal/safe-traversal.component';
 import { ZippyComponent } from './zippy/zippy.component';
+import { ContactFormComponent } from './contact-form/contact-form.component';
+import { ModelGroupComponent } from './model-group/model-group.component';
+import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.component';
 
 
 
@@ -38,12 +41,16 @@ import { ZippyComponent } from './zippy/zippy.component';
     NgClassComponent,
     SafeTraversalComponent,
     InputFormattingDirective,
-    ZippyComponent
+    ZippyComponent,
+    ContactFormComponent,
+    ModelGroupComponent,
+    MyReactiveFormComponent
     
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AuthorsService],
   bootstrap: [AppComponent]
