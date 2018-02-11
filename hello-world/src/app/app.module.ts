@@ -22,6 +22,8 @@ import { ZippyComponent } from './zippy/zippy.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ModelGroupComponent } from './model-group/model-group.component';
 import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.component';
+import { FormWithArraysComponent } from './form-with-arrays/form-with-arrays.component';
+import { FormBuilderComponent } from './form-builder/form-builder.component';
 
 
 
@@ -44,7 +46,9 @@ import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.com
     ZippyComponent,
     ContactFormComponent,
     ModelGroupComponent,
-    MyReactiveFormComponent
+    MyReactiveFormComponent,
+    FormWithArraysComponent,
+    FormBuilderComponent
     
   ],
   imports: [
