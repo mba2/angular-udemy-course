@@ -24,6 +24,7 @@ import { ModelGroupComponent } from './model-group/model-group.component';
 import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.component';
 import { FormWithArraysComponent } from './form-with-arrays/form-with-arrays.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
+import { FormPasswordComponent } from './form-password/form-password.component';
 
 
 
@@ -48,7 +49,8 @@ import { FormBuilderComponent } from './form-builder/form-builder.component';
     ModelGroupComponent,
     MyReactiveFormComponent,
     FormWithArraysComponent,
-    FormBuilderComponent
+    FormBuilderComponent,
+    FormPasswordComponent
     
   ],
   imports: [
