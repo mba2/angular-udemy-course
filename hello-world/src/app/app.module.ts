@@ -5,6 +5,7 @@ import { AuthorsService } from './authors.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -25,6 +26,8 @@ import { MyReactiveFormComponent } from './my-reactive-form/my-reactive-form.com
 import { FormWithArraysComponent } from './form-with-arrays/form-with-arrays.component';
 import { FormBuilderComponent } from './form-builder/form-builder.component';
 import { FormPasswordComponent } from './form-password/form-password.component';
+import { PostsComponent } from './posts/posts.component';
+import { PostService } from './services/post.service';
 
 
 
@@ -50,15 +53,19 @@ import { FormPasswordComponent } from './form-password/form-password.component';
     MyReactiveFormComponent,
     FormWithArraysComponent,
     FormBuilderComponent,
-    FormPasswordComponent
-    
+    FormPasswordComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpModule
   ],
-  providers: [AuthorsService],
+  providers: [
+    AuthorsService,
+    PostService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
