@@ -1,0 +1,6 @@
+<button class="btn btn-danger" (click)="loadChars()">Load</button>
+<ul>
+  <li *ngFor="let char of arr; index as i, odd as isOdd; trackBy: trackBy">
+    {{i}} - {{ char.name }} <i *ngIf="isOdd"> -- ODD</i>
+  </li>
+</ul>
