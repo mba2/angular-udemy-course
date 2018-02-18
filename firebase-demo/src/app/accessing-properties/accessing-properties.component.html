@@ -1,0 +1,10 @@
+<ul *ngIf="author_1$ | async as author">
+  <li>{{ author.id }}</li>
+  <li>{{ author.name }}</li>
+</ul>
+
+<p> .... or .....</p>
+<ul>
+  <li>{{ (author_2$ | async)?.id}}</li>
+  <li>{{ (author_2$ | async)?.name}}</li>
+</ul>

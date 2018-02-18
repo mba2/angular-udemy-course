@@ -1,0 +1,10 @@
+id<input type="text" #id>
+name<input type="text" #name>
+<input type="submit" (click)="add(id,name)" #field>
+
+<div>
+  {{ appConfig$ | async | json }}
+</div>
+
+
+

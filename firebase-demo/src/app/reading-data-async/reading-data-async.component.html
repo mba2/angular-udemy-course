@@ -1,0 +1,14 @@
+<ul>
+  <li *ngFor="let course of courses$ | async">
+    {{ course}}
+  </li>
+</ul>
+
+
+<p>
+  Object {{ object$ | async | json }}
+</p>
+<p>
+  Object {{ object_2$ | async | json }}
+</p>
+
