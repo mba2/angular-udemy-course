@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
  *  COMPONENTS
  */
 import { AppComponent } from './app.component';
+import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
 /**
  * DATABASE 
  */
@@ -14,7 +15,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 /** 
  * REDUX
- */
+ *
 /** 
  * SERVICES
  */
@@ -25,7 +26,8 @@ import { environment } from './../environments/environment';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BsNavbarComponent
   ],
   imports: [
     BrowserModule,
