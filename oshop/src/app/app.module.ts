@@ -60,6 +60,7 @@ import { environment } from './../environments/environment';
       { 'path' : '', 'component': HomeComponent },
       { 'path' : 'products', 'component': ProductsComponent },
       { 'path' : 'shopping-cart', 'component': ShoppingCartComponent },
+      { 'path' : 'my-orders', 'component': MyOrdersComponent },
       { 'path' : 'order-success', 'component': OrderSuccessComponent },
       { 'path' : 'login', 'component': LoginComponent },
       { 'path' : 'admin/products', 'component': AdminProductsComponent },
