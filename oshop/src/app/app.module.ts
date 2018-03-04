@@ -1,4 +1,4 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule, CanActivate } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -28,10 +28,12 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
 /** 
  * REDUX
  *
-/** 
- * SERVICES
- */
-/** 
+ /** 
+  * SERVICES
+  */
+ import { AuthService } from './services/auth.service';
+ import { AuthGuardService } from './services/auth-guard.service';
+ /** 
  * APP MISC
  */
 import { environment } from './../environments/environment';
@@ -48,7 +50,8 @@ import { environment } from './../environments/environment';
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ import { environment } from './../environments/environment';
       { 'path' : '', 'component': HomeComponent },
       { 'path' : 'products', 'component': ProductsComponent },
       { 'path' : 'shopping-cart', 'component': ShoppingCartComponent },
+      { 'path' : 'checkout', 'component': CheckoutComponent, canActivate: [AuthGuardService] },
       { 'path' : 'my-orders', 'component': MyOrdersComponent },
       { 'path' : 'order-success', 'component': OrderSuccessComponent },
       { 'path' : 'login', 'component': LoginComponent },
@@ -68,6 +72,8 @@ import { environment } from './../environments/environment';
     ])
   ],
   providers: [
+    AuthService,
+    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
