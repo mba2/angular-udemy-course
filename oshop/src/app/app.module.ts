@@ -1,12 +1,23 @@
+import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 
 /** 
  *  COMPONENTS
  */
 import { AppComponent } from './app.component';
 import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { ProductsComponent } from './components/products/products.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { OrderSuccessComponent } from './components/order-success/order-success.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
+import { LoginComponent } from './components/login/login.component';
+import { AdminProductsComponent } from './components/admin-products/admin-products.component';
+import { AdminOrdersComponent } from './components/admin-orders/admin-orders.component';
+
+
 /**
  * DATABASE 
  */
@@ -27,15 +38,34 @@ import { environment } from './../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
-    BsNavbarComponent
+    BsNavbarComponent,
+    HomeComponent,
+    ProductsComponent,
+    ShoppingCartComponent,
+    CheckoutComponent,
+    OrderSuccessComponent,
+    MyOrdersComponent,
+    AdminProductsComponent,
+    AdminOrdersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    RouterModule.forRoot([
+      { 'path' : '', 'component': HomeComponent },
+      { 'path' : 'products', 'component': ProductsComponent },
+      { 'path' : 'shopping-cart', 'component': ShoppingCartComponent },
+      { 'path' : 'order-success', 'component': OrderSuccessComponent },
+      { 'path' : 'login', 'component': LoginComponent },
+      { 'path' : 'admin/products', 'component': AdminProductsComponent },
+      { 'path' : 'admin/orders', 'component': AdminOrdersComponent }
+    ])
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
