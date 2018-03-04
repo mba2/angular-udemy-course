@@ -5,6 +5,14 @@ import { fromJS, Map} from 'immutable';
  */
 import { INCREMENT } from './actions/actions';
 
+class ExampleClass {
+  constructor(private state, private action) {}
+  
+  increment() { 
+    // return Object.assign({}, this.state, { counter : this.state.counter + 1});
+    return  tassign(this.state, { counter : this.state.counter + 1});
+  }
+}
 
 export interface IAppState {
   counter: number;
@@ -24,10 +32,10 @@ export const INITIAL_STATE = {
  * APPROACH : using tassign() to prevent object Mutation
  */
 export function rootReducer(state: IAppState, action): IAppState {
+  const example_actions = new ExampleClass(state,action);
   switch (action.type) {
-    case 'INCREMENT':
-      // return Object.assign({}, state, { counter : state.counter + 1});
-      return  tassign(state, { counter : state.counter + 1});
+    case 'INCREMENT': 
+      return example_actions.increment();
     default:
       break;
   }
