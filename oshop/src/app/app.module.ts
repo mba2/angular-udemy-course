@@ -1,6 +1,7 @@
 import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 /** 
  *  COMPONENTS
@@ -54,6 +55,7 @@ import { environment } from './../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
+    NgbModule.forRoot(),
     RouterModule.forRoot([
       { 'path' : '', 'component': HomeComponent },
       { 'path' : 'products', 'component': ProductsComponent },
